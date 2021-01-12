@@ -12,6 +12,8 @@ import { AnswerComponent } from './components/trivia-games/answer/answer.compone
 import { TriviaPageComponent } from './pages/trivia-page/trivia-page.component';
 import { HomeComponent } from './pages/home/home.component';
 import { AppRountingModule } from './app-rounting.module';
+import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
+import { MaterialModule } from './material.module';
 
 @NgModule({
   declarations: [
@@ -23,12 +25,14 @@ import { AppRountingModule } from './app-rounting.module';
     FeedbackComponent,
     AnswerComponent,
     TriviaPageComponent,
-    HomeComponent
+    HomeComponent,
+    SidenavComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRountingModule
+    AppRountingModule,
+    MaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
