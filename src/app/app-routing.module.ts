@@ -2,15 +2,16 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
+import { TriviaGamesComponent } from './components/trivia-games/trivia-games.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    loadChildren: ()=> import("./pages/home/home.module").then(m => m.HomeModule)
+    component: HomeComponent
   },
   {
     path: 'trivia',
-    loadChildren: ()=> import("./components/trivia-games/trivia.module").then(m => m.TriviaModule)
+    loadChildren: () => import("./components/trivia-games/trivia-games.module").then(module => module.TriviaGamesModule)
   }
 ]
 
@@ -22,4 +23,4 @@ const appRoutes: Routes = [
   ],
   exports: [RouterModule]
 })
-export class AppRountingModule { }
+export class AppRoutingModule { }

@@ -4,25 +4,23 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
-import { AppRountingModule } from './app-rounting.module';
-import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
+import { AppRoutingModule } from './app-routing.module';
 import { MaterialModule } from './material.module';
-import { TriviaModule } from './components/trivia-games/trivia.module';
+import { TriviaGamesModule } from './components/trivia-games/trivia-games.module';
 import { TriviaService } from './services/trivia.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
-    SidenavComponent
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    AppRountingModule,
+    AppRoutingModule,
     MaterialModule,
-    TriviaModule
+    TriviaGamesModule
   ],
   providers: [TriviaService],
   bootstrap: [AppComponent]
