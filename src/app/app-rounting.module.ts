@@ -12,7 +12,7 @@ const appRoutes: Routes = [
   },
   {
     path: 'trivia',
-    component: TriviaPageComponent
+    loadChildren: ()=> import("./components/trivia-games/trivia.module").then(m => m.TriviaModule)
   }
 ]
 
