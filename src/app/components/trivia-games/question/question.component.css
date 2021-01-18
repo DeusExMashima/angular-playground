@@ -1,0 +1,24 @@
+.question-component {
+    display: flex;
+}
+
+h2 {
+    font-family: 'Lobster', cursive;
+    font-size:36px;
+}
+.question-info {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: flex-start;
+    align-content: center;
+}
+.question-info span {
+    margin: 10px;
+}
+
+.question-text{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}

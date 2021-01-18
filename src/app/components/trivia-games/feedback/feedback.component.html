@@ -1,1 +1,16 @@
-<p>feedback works!</p>
+
+<section class="feedback" id="feedback-component" *ngIf="feedbackIsSubmitted; else notSubmitted">
+    <h2 mat-dialog-title *ngIf="feedbackIsCorrect; else wrongTitle">Good job!</h2>
+    <ng-template #wrongTitle>
+        <h2>Oops! That doesn't seem right...</h2>
+    </ng-template>
+    <div *ngIf="feedbackIsCorrect; else wrongAnswer">
+        <strong>{{ feedbackCorrectAnswer }}</strong> is the correct answer!
+    </div>
+    <ng-template #wrongAnswer>
+        That is not the correct answer... The correct answer is <strong> {{ feedbackCorrectAnswer }}</strong>
+    </ng-template>
+</section>
+<ng-template #notSubmitted>
+    <h2>Your Feedback Will Be Shown Here Once Submitted</h2>
+</ng-template>

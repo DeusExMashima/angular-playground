@@ -1,1 +1,32 @@
-<p>question works!</p>
+<section mat-card class="question-component" id="question-component">
+    <div class="question-text">
+        <h2 class="question">Question {{questionNumber}} </h2>
+        <h3>{{ questionInfo.question_text }}</h3>
+    </div>
+    <article class="question-info">
+        <div class="question-info-totalcorrect">
+            <span class="subject">
+                Total Correct
+            </span>
+            <span class="category">
+                {{ totalCorrect }} / {{questionNumber}}
+            </span>
+        </div>
+        <div class="question-info-category">
+            <span class="subject">
+                Category
+            </span>
+            <span class="category">
+                {{ questionInfo.category }}
+            </span>
+        </div>
+        <div class="question-info-difficulty">
+            <span class="subject">
+                Difficulty
+            </span>
+            <span class="difficulty">
+                <mat-icon *ngFor="let star of questionInfo.difficulty_stars">{{ star }}</mat-icon>
+            </span>
+        </div>
+    </article>
+</section>

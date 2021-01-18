@@ -1,15 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-feedback',
   templateUrl: './feedback.component.html',
-  styleUrls: ['./feedback.component.css']
+  styleUrls: ['./feedback.component.css'],
 })
 export class FeedbackComponent implements OnInit {
 
-  constructor() { }
+  @Input() feedbackIsCorrect: boolean;
+  @Input() feedbackIsSubmitted: boolean;
+  @Input() feedbackCorrectAnswer: boolean;
 
-  ngOnInit(): void {
+  constructor() {
   }
 
+  ngOnInit():void {}
 }

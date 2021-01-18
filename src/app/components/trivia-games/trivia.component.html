@@ -1,0 +1,25 @@
+<!-- card -->
+<mat-card class="question-card">
+    <app-question
+        [questionNumber]="triviaTotalQuestionAsked"
+        [totalCorrect]="triviaTotalCorrect"
+        [questionInfo]="currentQuestion">
+    </app-question>
+    <app-answer
+        [choices]="answers"
+        [correctChoice]="correctAnswer"
+        [hasSubmitted]="triviaIsSubmitted"
+        (submitAnswer)="checkAnswer($event)">
+    </app-answer>
+</mat-card>
+<!--end of card-->
+
+<!-- modal feedback-->
+<app-feedback
+    [feedbackIsSubmitted]="triviaIsSubmitted"
+    [feedbackIsCorrect]="triviaIsCorrect"
+    [feedbackCorrectAnswer]="correctAnswer"
+    >
+</app-feedback>
+
+<button *ngIf="triviaIsSubmitted" mat-raised-button color="primary" (click)="getTriviaQuestion()">Next Question</button>

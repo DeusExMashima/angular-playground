@@ -1,1 +1,27 @@
-<p>answer works!</p>
+<section class="answer-component" id="answer-component">
+    <mat-radio-group [(ngModel)]="currentAnswer"
+    aria-label="Select your answer">
+    <div *ngIf="hasSubmitted; else availableButton">
+        <mat-radio-button *ngFor="let answer of choices" [value]="answer" disabled>
+            {{ answer }}
+        </mat-radio-button>
+        <button
+            mat-raised-button color="primary"
+            disabled>
+            Submit
+        </button>
+    </div>
+    <ng-template #availableButton>
+        <mat-radio-button *ngFor="let answer of choices" [value]="answer">
+            {{ answer }}
+        </mat-radio-button>
+        <button
+            mat-raised-button color="primary"
+            (click)="onSubmit()">
+            Submit
+        </button>
+    </ng-template>
+    </mat-radio-group>
+    <h1>You pick this answer: {{ currentAnswer }}</h1>
+
+</section>
