@@ -4,8 +4,6 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
-import { TriviaPageComponent } from './pages/trivia-page/trivia-page.component';
-import { HomeComponent } from './pages/home/home.component';
 import { AppRountingModule } from './app-rounting.module';
 import { SidenavComponent } from './components/layout/sidenav/sidenav.component';
 import { MaterialModule } from './material.module';
@@ -17,8 +15,6 @@ import { TriviaService } from './services/trivia.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    TriviaPageComponent,
-    HomeComponent,
     SidenavComponent
   ],
   imports: [

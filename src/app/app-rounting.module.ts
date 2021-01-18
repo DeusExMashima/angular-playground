@@ -1,14 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
-import { TriviaPageComponent } from './pages/trivia-page/trivia-page.component';
 
 const appRoutes: Routes = [
   {
     path: '',
-    component: HomeComponent
+    loadChildren: ()=> import("./pages/home/home.module").then(m => m.HomeModule)
   },
   {
     path: 'trivia',
