@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, AfterViewInit, OnInit } from '@angular/core';
-import { Question } from '../../services/models/question-adapter.model';
-import { TriviaService } from '../../services/trivia.service';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Question } from '../../../services/models/question-adapter.model';
+import { TriviaService } from '../../../services/trivia.service';
 
 
 @Component({
